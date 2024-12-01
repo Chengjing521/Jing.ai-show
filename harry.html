@@ -7,22 +7,21 @@
     <title>哈利波特的魔法世界</title>
     <style>
         body {
-            font-family: 'Permanent Marker', cursive, Arial, sans-serif; /* 手写风格字体 */
+            font-family: 'Permanent Marker', cursive, Arial, sans-serif;
             line-height: 1.6;
             color: #333;
             padding: 20px;
-            background: url('IMG_7158.jpg') no-repeat center center fixed; /* 替换为实际的图片路径 */
+            background: url('IMG_7158.jpg') no-repeat center center fixed;
             background-size: cover;
         }
         h1, h2 {
             color: #5a2d82;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* 增加标题阴影效果 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
         h3 {
-            font-size: 1.4em; /* 比正文大两个字号 */
+            font-size: 1.4em;
             color: #333;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* 为学院名字增加阴影效果 */
-            margin-bottom: 5px; /* 减少与学院介绍的间距 */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
         p {
             font-size: 1em;
@@ -38,18 +37,10 @@
             margin: 10px 0;
             padding-left: 20px;
         }
-        .gryffindor {
-            color: #b71c1c; /* 红色 */
-        }
-        .hufflepuff {
-            color: #fbc02d; /* 黄色 */
-        }
-        .ravenclaw {
-            color: #1e88e5; /* 蓝色 */
-        }
-        .slytherin {
-            color: #388e3c; /* 绿色 */
-        }
+        .gryffindor { color: #b71c1c; }
+        .hufflepuff { color: #fbc02d; }
+        .ravenclaw { color: #1e88e5; }
+        .slytherin { color: #388e3c; }
         .house img {
             width: 60%;
             max-width: 300px;
@@ -58,25 +49,32 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             margin-top: 10px;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* 增加图片阴影 */
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
         }
         .representative {
             margin-top: 10px;
             font-size: 0.95em;
             color: #444;
-            background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* 增加阴影 */
+            display: flex;
+            align-items: center;
         }
         .representative img {
             width: 50%;
             max-width: 200px;
             border-radius: 5px;
-            margin-top: 5px;
+            margin-right: 10px;
+        }
+        .quote {
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            font-style: italic;
+            max-width: 50%;
+            text-align: center;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> <!-- 引入手写风格字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -93,8 +91,8 @@
                 <p>格兰芬多象征着<mark>勇气</mark>与<mark>决心</mark>，适合那些不惧冒险的学生。</p>
                 <img src="IMG_7154.jpg" alt="格兰芬多徽章">
                 <div class="representative">
-                    <p>代表人物：哈利·波特</p>
                     <img src="IMG_7161.jpg" alt="哈利·波特">
+                    <p class="quote">“你应该学会赢得别人的尊重。”</p>
                 </div>
             </article>
 
@@ -103,8 +101,8 @@
                 <p>赫奇帕奇代表了<mark>忠诚</mark>与<mark>勤奋</mark>，是学院中最友好的成员。</p>
                 <img src="IMG_7157.jpg" alt="赫奇帕奇徽章">
                 <div class="representative">
-                    <p>代表人物：塞德里克</p>
                     <img src="IMG_7163.jpg" alt="塞德里克">
+                    <p class="quote">“把我的尸体带回去，好吗？”</p>
                 </div>
             </article>
 
@@ -113,8 +111,8 @@
                 <p>拉文克劳以<mark>智慧</mark>与<mark>创造</mark>为荣，是思想家的摇篮。</p>
                 <img src="IMG_7152.jpg" alt="拉文克劳徽章">
                 <div class="representative">
-                    <p>代表人物：卢娜</p>
                     <img src="IMG_7162.jpg" alt="卢娜">
+                    <p class="quote">“无法估量的智慧是人类最大的财富。”</p>
                 </div>
             </article>
 
@@ -123,8 +121,8 @@
                 <p>斯莱特林的核心价值是<mark>雄心</mark>与<mark>狡黠</mark>，适合追求卓越的学生。</p>
                 <img src="IMG_7153.jpg" alt="斯莱特林徽章">
                 <div class="representative">
-                    <p>代表人物：德拉科·马尔福</p>
                     <img src="IMG_7159.jpg" alt="德拉科·马尔福">
+                    <p class="quote">“因为我被他选中了，这是我的机会。”</p>
                 </div>
             </article>
         </section>
