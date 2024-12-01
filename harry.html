@@ -7,14 +7,21 @@
     <title>哈利波特的魔法世界</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Permanent Marker', cursive, Arial, sans-serif; /* 手写风格字体 */
             line-height: 1.6;
-            background-color: #f5f5f5;
             color: #333;
             padding: 20px;
+            background: url('IMG_7158.jpg') no-repeat center center fixed; /* 替换为实际的图片路径 */
+            background-size: cover;
         }
         h1, h2, h3 {
             color: #5a2d82;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* 增加标题阴影效果 */
+        }
+        p {
+            background-color: rgba(255, 255, 255, 0.8); /* 为文字添加半透明背景，提升可读性 */
+            padding: 10px;
+            border-radius: 5px;
         }
         .highlight {
             background-color: #ffffcc;
@@ -45,19 +52,21 @@
             color: #388e3c; /* 绿色 */
         }
         .house img {
-            width: 100%; /* 图片宽度占父容器的 60% */
-            max-width: 300px; /* 最大宽度为 300px */
-            max-height: 300px; /* 最大高度为 300px */
-            height: auto; /* 根据宽度自动调整高度 */
+            width: 60%;
+            max-width: 300px;
+            max-height: 300px;
+            height: auto;
             border: 1px solid #ddd;
             border-radius: 5px;
             margin-top: 10px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* 增加图片阴影 */
         }
         .house {
-            text-align: center; /* 图片与文字居中 */
+            text-align: center;
             margin-bottom: 20px;
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> <!-- 引入手写风格字体 -->
 </head>
 <body>
     <header>
