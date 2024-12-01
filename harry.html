@@ -45,11 +45,17 @@
             color: #388e3c; /* 绿色 */
         }
         .house img {
-            max-width: 100%;
-            height: auto;
+            width: 100%; /* 图片宽度占父容器的 100% */
+            max-width: 300px; /* 最大宽度为 300px */
+            max-height: 300px; /* 最大高度为 300px */
+            height: auto; /* 根据宽度自动调整高度 */
             border: 1px solid #ddd;
             border-radius: 5px;
             margin-top: 10px;
+        }
+        .house {
+            text-align: center; /* 图片与文字居中 */
+            margin-bottom: 20px;
         }
     </style>
 </head>
