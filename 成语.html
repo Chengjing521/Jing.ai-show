@@ -7,15 +7,15 @@
         /* 这里可以添加一些基本的CSS样式 */
         body { font-family: Arial, sans-serif; }
         h1 { color: #333; }
-        .pinyin { font-size: 0.8em; color: #666; margin-bottom: 5px; } /* 调整了拼音的样式 */
         ul { list-style-type: none; padding: 0; }
         li { margin-bottom: 10px; }
-        /* 增加上标样式 */
-        h1 sup { vertical-align: super; font-size: 0.8em; color: #666; }
+        /* 可以添加特定的样式来调整ruby的表现 */
+        ruby { font-size: 1em; } /* 调整ruby的大小 */
+        rt { font-size: 0.8em; } /* 调整拼音的大小 */
     </style>
 </head>
 <body>
-    <h1>孔融让梨<sup class="pinyin">Kǒng Róng ràng lí</sup></h1>
+    <h1><ruby>孔融让梨<rp>（</rp><rt>Kǒng Róng ràng lí</rt><rp>）</rp></ruby></h1>
     <ul>
         <li>四岁男孩孔融穿着古代汉服，站在一张摆满梨子的木桌前。</li>
         <li>他面带微笑，手里拿着一只梨，礼貌地递给站在旁边的哥哥。</li>
