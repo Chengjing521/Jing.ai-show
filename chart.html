@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Scatter Plot with D3.js</title>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <title>Line Chart with D3.js</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script> 
     <style>
         .axis {
             font: 10px sans-serif;
@@ -13,14 +13,10 @@
             stroke: #000;
             shape-rendering: crispEdges;
         }
-        .dot {
-            stroke: #fff;
-            fill: steelblue;
-            opacity: 0.8;
-        }
-        .dot:hover {
-            fill: orange;
-            stroke: #fff;
+        .line {
+            fill: none;
+            stroke: steelblue;
+            stroke-width: 2px;
         }
         .tooltip {
             position: absolute;
@@ -50,6 +46,10 @@
             { name: "Jack", math: 78, english: 85 }
         ];
 
+        // 提取数学和英语成绩
+        const mathScores = data.map(d => d.math);
+        const englishScores = data.map(d => d.english);
+
         // 设置图表尺寸
         const margin = { top: 20, right: 20, bottom: 30, left: 40 };
         const width = 500 - margin.left - margin.right;
@@ -64,7 +64,7 @@
 
         // 定义比例尺
         const xScale = d3.scaleLinear()
-            .domain([60, 100]) // X轴范围为60到100
+            .domain([0, data.length - 1]) // X轴范围为0到数据长度减1
             .range([0, width]);
 
         const yScale = d3.scaleLinear()
@@ -88,51 +88,56 @@
         svg.append("text")
             .attr("x", width / 2)
             .attr("y", height + margin.bottom - 10)
-            .text("Math Score")
+            .text("Student Index")
             .style("text-anchor", "middle");
 
         svg.append("text")
             .attr("transform", "rotate(-90)")
             .attr("x", -height / 2)
             .attr("y", -margin.left + 10)
-            .text("English Score")
+            .text("Score")
             .style("text-anchor", "middle");
 
-        // 添加散点
+        // 添加折线
+        const line = d3.line()
+            .x(d => xScale(d.index))
+            .y(d => yScale(d.score));
+
+        const lineData = data.map((d, i) => ({ index: i, score: d.math }));
+
+        svg.append("path")
+            .datum(lineData)
+            .attr("class", "line")
+            .attr("d", line);
+
+        // 添加数据点
         const dots = svg.selectAll(".dot")
-            .data(data)
+            .data(lineData)
             .enter().append("circle")
             .attr("class", "dot")
-            .attr("cx", d => xScale(d.math))
-            .attr("cy", d => yScale(d.english))
-            .attr("r", 5)
-            .on("mouseover", function(event, d) {
-                d3.select(this).attr("fill", "orange");
-                tooltip.transition()
-                    .duration(200)
-                    .style("opacity", 0.9);
-                tooltip.html(`${d.name}<br>Math: ${d.math}<br>English: ${d.english}`)
-                    .style("left", (event.pageX + 10) + "px")
-                    .style("top", (event.pageY - 28) + "px");
-            })
-            .on("mouseout", function() {
-                d3.select(this).attr("fill", "steelblue");
-                tooltip.transition()
-                    .duration(200)
-                    .style("opacity", 0);
-            });
+            .attr("cx", d => xScale(d.index))
+            .attr("cy", d => yScale(d.score))
+            .attr("r", 3);
 
         // 添加工具提示
         const tooltip = d3.select("body").append("div")
             .attr("class", "tooltip")
             .style("opacity", 0);
 
-        // 鼠标移动时更新工具提示位置
-        svg.on("mousemove", function(event) {
-            tooltip.style("left", (event.pageX + 10) + "px")
+        // 鼠标移动时更新工具提示位置和内容
+        dots.on("mouseover", function(event, d) {
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", 0.9);
+            tooltip.html(`${data[d.index].name}<br>Math: ${data[d.index].math}`)
+                .style("left", (event.pageX + 10) + "px")
                 .style("top", (event.pageY - 28) + "px");
+        })
+        .on("mouseout", function() {
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", 0);
         });
     </script>
 </body>
 </html>
-
