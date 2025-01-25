@@ -23,21 +23,36 @@
         h1 {
             font-size: 50px;
             font-weight: bold;
+            background: rgba(255, 255, 255, 0.3); /* 半透明浅色背景 */
+            color: #000; /* 黑色字体 */
+            padding: 20px;
+            border-radius: 10px; /* 圆角 */
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 添加阴影 */
         }
         .btn {
             display: inline-block;
             margin-top: 20px;
-            padding: 15px 30px;
+            padding: 15px 40px;
             font-size: 20px;
             color: #fff;
             background-color: #ff4081;
             border: none;
-            border-radius: 5px;
+            border-radius: 30px; /* 圆角按钮 */
             cursor: pointer;
             text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 添加阴影 */
+            transition: all 0.3s ease;
         }
         .btn:hover {
             background-color: #e91e63;
+            transform: scale(1.05); /* 鼠标悬停放大效果 */
+        }
+        .btn::before {
+            content: "👂🏻 "; /* 添加耳朵图标 */
+            font-size: 22px;
+            margin-right: 5px;
         }
     </style>
 </head>
