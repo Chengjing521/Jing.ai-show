@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>以后就讲这个了</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&display=swap');
+
         body {
             margin: 0;
             padding: 0;
@@ -14,8 +16,8 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            font-family: 'Noto Serif SC', serif;
             color: white;
-            font-family: Arial, sans-serif;
         }
         .container {
             max-width: 600px;
@@ -23,31 +25,34 @@
         h1 {
             font-size: 50px;
             font-weight: bold;
-            background: rgba(255, 255, 255, 0.3); /* 半透明浅色背景 */
-            color: #000; /* 黑色字体 */
-            padding: 20px;
-            border-radius: 10px; /* 圆角 */
+            color: #55768c; /* 替换为更优雅的颜色 */
+            padding: 20px 40px;
+            border: 2px solid rgba(255, 255, 255, 0.5); /* 透明感边框 */
+            border-radius: 10px; /* 圆角边框 */
             display: inline-block;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 添加阴影 */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* 增加立体感 */
+            background: rgba(255, 255, 255, 0.1); /* 轻微透明背景增加层次感 */
         }
         .btn {
             display: inline-block;
-            margin-top: 20px;
-            padding: 15px 40px;
+            margin-top: 30px;
+            padding: 15px 50px;
             font-size: 20px;
             color: #fff;
             background-color: #ff4081;
-            border: none;
+            border: 2px solid #ff4081;
             border-radius: 30px; /* 圆角按钮 */
             cursor: pointer;
             text-decoration: none;
             font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 添加阴影 */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* 立体阴影 */
             transition: all 0.3s ease;
         }
         .btn:hover {
             background-color: #e91e63;
+            border-color: #e91e63;
             transform: scale(1.05); /* 鼠标悬停放大效果 */
+            box-shadow: 0 10px 25px rgba(233, 30, 99, 0.5);
         }
         .btn::before {
             content: "👂🏻 "; /* 添加耳朵图标 */
