@@ -35,20 +35,23 @@
         }
 
         .container {
-            max-width: 700px;
+            max-width: 90%;
             position: relative;
             z-index: 1;
+            white-space: nowrap; /* 防止文本换行，保持一行 */
+            overflow: hidden;
         }
 
         h1 {
             font-family: 'Dancing Script', cursive;
-            font-size: 85px;  /* 增大字号 */
+            font-size: 85px;  /* 保持字号 */
             font-weight: 900;  /* 加粗效果 */
-            letter-spacing: 10px;  /* 增加字间距 */
+            letter-spacing: 8px;  /* 增加字间距 */
             color: #F1BBC9;  /* 芭蕾粉 */
             padding: 20px 50px;
             background: rgba(255, 255, 255, 0.1); /* 轻微透明背景，增加层次感 */
             border-radius: 10px;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);  /* 添加稍深的阴影 */
         }
 
         .btn {
