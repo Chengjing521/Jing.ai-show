@@ -7,54 +7,98 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
             background: url('群封.jpg') no-repeat center center/cover;
             color: white;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 30px;
-            color: #333;
-            background-color: rgba(255, 255, 255, 0.7);
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .chart-container {
-            margin-top: 40px;
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
+
+        h1 {
+            font-size: 36px;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            width: 80%;
+        }
+
         .chart {
             width: 45%;
             background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for the charts */
             padding: 20px;
             border-radius: 8px;
+            text-align: center;
+        }
+
+        .chart h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .chart img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .btn {
+            margin-top: 40px;
+            padding: 12px 40px;
+            font-size: 18px;
+            color: white;
+            background-color: transparent;
+            border: 2px solid #ff4081;  /* 玫红色边框 */
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff4081;
+            color: white;
         }
     </style>
 </head>
 <body>
+
     <h1>网络上的她们</h1>
-    <p style="background-color: rgba(211, 211, 211, 0.8); padding: 10px; font-size: 16px;">
+
+    <p style="background-color: rgba(211, 211, 211, 0.8); padding: 10px; font-size: 16px; text-align: center;">
         在网络的世界里，脱口秀女演员们的影响力不仅仅体现在她们的表演上，还可以通过数据分析揭示她们在公众中的印象。以下是关于她们的词频图、词云图以及情感分析图。
     </p>
 
     <div class="chart-container">
         <div class="chart">
             <h2>词频图</h2>
-            <img src="脱口秀词频图.png" alt="词频图" width="100%">
+            <img src="脱口秀词频图.png" alt="词频图">
         </div>
         <div class="chart">
             <h2>词云图</h2>
-            <img src="脱口秀词云图.png" alt="词频图" width="100%">
+            <img src="脱口秀词云图.png" alt="词云图">
         </div>
     </div>
 
     <div class="chart-container">
         <div class="chart">
             <h2>情感分析图</h2>
-            <img src="脱口秀情感分析.png" alt="情感分析图" width="100%">
+            <img src="脱口秀情感分析.png" alt="情感分析图">
         </div>
     </div>
+
+    <a href="#" class="btn">最后</a>
 
 </body>
 </html>
